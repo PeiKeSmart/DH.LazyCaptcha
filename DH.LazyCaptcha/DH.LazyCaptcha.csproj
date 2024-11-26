@@ -50,7 +50,7 @@
 
   <ItemGroup>
     <PackageReference Include="MathExpressions" Version="1.1.2" />
-    <PackageReference Include="Pek.VirtualFileSystem" Version="4.0.2024.1123-beta1040" />
+    <PackageReference Include="Pek.VirtualFileSystem" Version="4.0.2024.1126-beta0606" />
     <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="2.1.4" />
   </ItemGroup>
 
