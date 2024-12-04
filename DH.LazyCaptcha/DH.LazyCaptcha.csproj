@@ -41,7 +41,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DH.RateLimter" Version="3.91.2024.1125-beta0751" />
+    <PackageReference Include="DH.RateLimter" Version="3.91.2024.1204-beta0416" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -50,7 +50,7 @@
 
   <ItemGroup>
     <PackageReference Include="MathExpressions" Version="1.1.2" />
-    <PackageReference Include="Pek.VirtualFileSystem" Version="4.0.2024.1126-beta0606" />
+    <PackageReference Include="Pek.VirtualFileSystem" Version="4.0.2024.1204-beta0411" />
     <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="2.1.4" />
   </ItemGroup>
 
