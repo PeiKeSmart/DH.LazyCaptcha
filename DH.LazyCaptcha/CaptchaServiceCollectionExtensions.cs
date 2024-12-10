@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using NewLife.Log;
+using NewLife.Serialization;
 
 namespace DH.LazyCaptcha
 {
@@ -61,7 +62,7 @@ namespace DH.LazyCaptcha
                 // 打印 optionsAction 中的 CaptchaOptions 配置节
                 var options = new CaptchaOptions();
                 optionsAction(options);
-                XTrace.WriteLine($"CaptchaOptions from optionsAction: {System.Text.Json.JsonSerializer.Serialize(options)}");
+                XTrace.WriteLine($"CaptchaOptions from optionsAction: {options.ToJson()}");
             }
 
             services.AddScoped<ICaptcha, DefaultCaptcha>();
