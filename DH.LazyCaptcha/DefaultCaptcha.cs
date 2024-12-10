@@ -5,6 +5,9 @@ using DH.LazyCaptcha.Storage;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 
+using NewLife.Log;
+using NewLife.Serialization;
+
 namespace DH.LazyCaptcha
 {
     /// <summary>
@@ -57,6 +60,8 @@ namespace DH.LazyCaptcha
         public virtual CaptchaData Generate()
         {
             var captchaId = "ybbcode";
+
+            XTrace.WriteLine($"获取验证码注入数据：{_options.ToJson()}");
 
             var (renderText, code) = _captchaCodeGenerator.Generate(_options.CodeLength);
             var image = _captchaImageGenerator.Generate(renderText, _options.ImageOption);
