@@ -55,16 +55,18 @@ namespace DH.LazyCaptcha
                     options.ImageOption.ForegroundColors = DefaultColors.Instance.Colors;
                 }
             });
-            if (optionsAction != null) services.PostConfigure(optionsAction);
+            if (optionsAction != null)
+            {
+                services.PostConfigure(optionsAction);
+                // 打印 optionsAction 中的 CaptchaOptions 配置节
+                var options = new CaptchaOptions();
+                optionsAction(options);
+                XTrace.WriteLine($"CaptchaOptions from optionsAction: {System.Text.Json.JsonSerializer.Serialize(options)}");
+            }
 
             services.AddScoped<ICaptcha, DefaultCaptcha>();
             services.AddScoped<IStorage, DefaultStorage>();
             services.AddDistributedMemoryCache();
-
-            // 打印 CaptchaOptions 配置节
-            var captchaOptions = configuration?.GetSection("CaptchaOptions").Get<CaptchaOptions>();
-            XTrace.WriteLine($"CaptchaOptions: {System.Text.Json.JsonSerializer.Serialize(captchaOptions)}");
-
 
             return services;
         }
