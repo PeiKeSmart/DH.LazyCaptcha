@@ -59,6 +59,11 @@ namespace DH.LazyCaptcha
             services.AddScoped<IStorage, DefaultStorage>();
             services.AddDistributedMemoryCache();
 
+            // 打印 CaptchaOptions 配置节
+            var captchaOptions = configuration?.GetSection("CaptchaOptions").Get<CaptchaOptions>();
+            Console.WriteLine($"CaptchaOptions: {System.Text.Json.JsonSerializer.Serialize(captchaOptions)}");
+
+
             return services;
         }
 
