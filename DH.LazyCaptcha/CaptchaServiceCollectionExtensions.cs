@@ -3,6 +3,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+using NewLife.Log;
+
 namespace DH.LazyCaptcha
 {
     public static class CaptchaServiceCollectionExtensions
@@ -61,7 +63,7 @@ namespace DH.LazyCaptcha
 
             // 打印 CaptchaOptions 配置节
             var captchaOptions = configuration?.GetSection("CaptchaOptions").Get<CaptchaOptions>();
-            Console.WriteLine($"CaptchaOptions: {System.Text.Json.JsonSerializer.Serialize(captchaOptions)}");
+            XTrace.WriteLine($"CaptchaOptions: {System.Text.Json.JsonSerializer.Serialize(captchaOptions)}");
 
 
             return services;
