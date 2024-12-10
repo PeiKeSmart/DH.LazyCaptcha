@@ -1,6 +1,8 @@
 ﻿using DH.LazyCaptcha.Generator.Image.Models;
 using DH.LazyCaptcha.Generator.Image.Option;
 
+using NewLife.Log;
+
 using SixLabors.Fonts;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Drawing;
@@ -262,6 +264,7 @@ namespace DH.LazyCaptcha.Generator.Image {
         /// <returns></returns>
         public virtual byte[] Generate(string text, CaptchaImageGeneratorOption option)
         {
+            XTrace.WriteLine($"获取验证码数据：{option.Animation}");
             if (option.Animation)
             {
                 return GenerateAnimation(text, option);
