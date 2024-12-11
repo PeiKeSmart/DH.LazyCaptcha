@@ -61,8 +61,6 @@ namespace DH.LazyCaptcha
         {
             var captchaId = "ybbcode";
 
-            XTrace.WriteLine($"获取验证码注入数据：{_options.ToJson()}");
-
             var (renderText, code) = _captchaCodeGenerator.Generate(_options.CodeLength);
             var image = _captchaImageGenerator.Generate(renderText, _options.ImageOption);
 
