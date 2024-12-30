@@ -38,4 +38,9 @@ public class CaptchaStartup : IDHStartup
     /// 获取此启动配置实现的顺序
     /// </summary>
     public Int32 StartupOrder => 102; //常见服务应在错误处理程序之后加载
+
+    /// <summary>
+    /// 获取此启动配置实现的顺序。主要针对ConfigureMiddleware、UseRouting前执行的数据、UseAuthentication或者UseAuthorization后面 Endpoints前执行的数据
+    /// </summary>
+    public Int32 ConfigureOrder => 200;
 }
