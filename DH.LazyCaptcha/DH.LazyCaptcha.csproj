@@ -18,6 +18,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
     <NoWarn>1701;1702;1591;NU5104;NU1505;NETSDK1138;CS7035</NoWarn>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <WarningsAsErrors>CA2007</WarningsAsErrors>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -41,9 +43,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DH.RateLimter" Version="3.91.2025.105-beta0331" />
+    <PackageReference Include="DH.RateLimter" Version="3.91.2025.106-beta0952" />
     <PackageReference Include="MathExpressions" Version="1.1.2" />
-    <PackageReference Include="Pek.VirtualFileSystem" Version="4.0.2025.105-beta0320" />
+    <PackageReference Include="Pek.VirtualFileSystem" Version="4.0.2025.106-beta0947" />
     <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="2.1.4" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
