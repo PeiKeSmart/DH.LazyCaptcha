@@ -45,7 +45,7 @@
   <ItemGroup>
     <PackageReference Include="DH.RateLimter" Version="3.91.2025.110-beta0356" />
     <PackageReference Include="MathExpressions" Version="1.1.2" />
-    <PackageReference Include="Pek.VirtualFileSystem" Version="4.0.2025.110-beta0347" />
+    <PackageReference Include="Pek.VirtualFileSystem" Version="4.0.2025.114-beta0354" />
     <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="2.1.5" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
