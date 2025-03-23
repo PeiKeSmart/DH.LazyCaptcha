@@ -9,6 +9,12 @@ public interface ICaptcha
     CaptchaData Generate();
 
     /// <summary>
+    /// 使用session及固定Key
+    /// </summary>
+    /// <returns></returns>
+    CaptchaData GenerateSId(String SId);
+
+    /// <summary>
     /// 生成验证码
     /// </summary>
     /// <param name="captchaId">验证码id</param>

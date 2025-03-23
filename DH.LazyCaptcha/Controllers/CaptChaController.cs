@@ -2,6 +2,8 @@
 
 using Microsoft.AspNetCore.Mvc;
 
+using Pek.Webs;
+
 namespace DH.LazyCaptcha.Controllers;
 
 /// <summary>
@@ -24,7 +26,9 @@ public partial class CaptChaController : Controller
     [RateValve(Policy = Policy.Ip, Limit = 30, Duration = 60)]
     public IActionResult GetCheckCode()
     {
-        var info = _captcha.Generate();
+        var SId = DHWebHelper.FillDeviceId(Pek.Webs.HttpContext.Current);
+
+        var info = _captcha.GenerateSId(SId);
         var stream = new MemoryStream(info.Bytes);
         return File(stream, "image/gif");
     }
