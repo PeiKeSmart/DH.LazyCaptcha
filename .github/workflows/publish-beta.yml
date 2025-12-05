@@ -20,6 +20,7 @@ jobs:
         dotnet-version: |
           8.x
           9.x
+          10.x
     - name: Restore
       run: |
         dotnet restore DH.LazyCaptcha/DH.LazyCaptcha.csproj
@@ -29,4 +30,4 @@ jobs:
     - name: Publish
       run: |
         dotnet nuget push ./out/*.nupkg --skip-duplicate --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.nugetKey }}
-        dotnet nuget push ./out/*.nupkg --skip-duplicate --source https://nuget.deng-hao.com/v3/index.json --api-key ${{ secrets.mynugetKey }}
+        dotnet nuget push ./out/*.nupkg --skip-duplicate --source https://nuget.chuangchu.net/v3/index.json --api-key ${{ secrets.mynugetKey }}
